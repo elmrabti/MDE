@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/UserStories/src" modelPluginID="UserStories" modelName="Bpmn"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="17.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>default.ecore</foreignModel>
+  <genPackages prefix="BPMN" disposableProviderFactory="true" ecorePackage="default.ecore#/">
+    <genClasses ecoreClass="default.ecore#//Object"/>
+    <genClasses ecoreClass="default.ecore#//Process">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Process/name"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Pool">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference default.ecore#//Pool/Ref_Lane"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//SubProcess"/>
+    <genClasses ecoreClass="default.ecore#//Gateway"/>
+    <genClasses ecoreClass="default.ecore#//Task"/>
+    <genClasses ecoreClass="default.ecore#//Flow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference default.ecore#//Flow/To"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference default.ecore#//Flow/From"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Artifacts"/>
+    <genClasses ecoreClass="default.ecore#//Group"/>
+    <genClasses ecoreClass="default.ecore#//DataObject"/>
+    <genClasses ecoreClass="default.ecore#//TextAnnotation"/>
+    <genClasses ecoreClass="default.ecore#//OR"/>
+    <genClasses ecoreClass="default.ecore#//XOR"/>
+    <genClasses ecoreClass="default.ecore#//Start"/>
+    <genClasses ecoreClass="default.ecore#//Join"/>
+    <genClasses ecoreClass="default.ecore#//Fork"/>
+    <genClasses ecoreClass="default.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Event/name"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Parallel"/>
+    <genClasses ecoreClass="default.ecore#//MessageFlow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference default.ecore#//MessageFlow/To_pool"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Lane">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Lane/name"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Intermediate"/>
+    <genClasses ecoreClass="default.ecore#//End"/>
+  </genPackages>
+</genmodel:GenModel>
